@@ -1,0 +1,38 @@
+$colorMap: (
+	background: #f5f5f7,
+	backgroundDark: #454545,
+);
+
+@function color ($key) {
+	@return map-get($colorMap, $key);
+}
+
+$sizeMap: (
+	default: 16px,
+);
+
+@function size ($key: 'default') {
+	@return map-get($sizeMap, $key);
+}
+
+$screenMap: (
+	desktop: 1920px,
+	laptop: 1200px,
+	tablet: 620px,
+	mobile: 320px
+);
+
+@function screen ($key: 'default') {
+	@return map-get($screenMap, $key);
+}
+
+$contentSizeMap: (
+	desktop: 1200px,
+	laptop: 1000px,
+	tablet: 800px,
+	mobile: 600px
+);
+
+@function contentSize ($key: 'default') {
+	@return map-get($contentSizeMap, $key);
+}

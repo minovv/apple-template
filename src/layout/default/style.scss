@@ -1,0 +1,23 @@
+@use '../../lib/service.scss' as s; // s - means service //
+
+.page {
+	font-family: 'Roboto', sans-serif;
+	font-size: s.size();
+	background-color: s.color('background');
+}
+
+.section {
+	display: flex;
+	justify-content: center;
+}
+
+.section__content {
+	max-width: 1200px;
+	width: 100%;
+
+	@media all and (width < s.screen('desktop')) {
+		background: red;
+	}
+}
+
+
