@@ -16,23 +16,12 @@ $sizeMap: (
 }
 
 $screenMap: (
-	desktop: 1920px,
-	laptop: 1200px,
-	tablet: 620px,
-	mobile: 320px
+	desktop: 1440px,
+	laptop: 1260px,
+	tablet: 1000px,
+	mobile: 620px
 );
 
 @function screen ($key: 'default') {
 	@return map-get($screenMap, $key);
-}
-
-$contentSizeMap: (
-	desktop: 1200px,
-	laptop: 1000px,
-	tablet: 800px,
-	mobile: 600px
-);
-
-@function contentSize ($key: 'default') {
-	@return map-get($contentSizeMap, $key);
 }
