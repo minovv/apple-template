@@ -6,28 +6,4 @@
 	background-color: s.color('background');
 }
 
-.section {
-	display: flex;
-	justify-content: center;
-}
-//This helps to adjust the max content size if the screen size are smaller in $screenMap
-$contentSizeMap: (
-	desktop: 1100px,
-	laptop: 900px,
-	tablet: 700px,
-	mobile: 500px
-);
-
-
-.section__content {
-	max-width: 1200px;
-	width: 100%;
-
-	@each $key, $value in s.$screenMap {
-		@media all and (width < $value) {
-			max-width: map-get($contentSizeMap, $key);
-		}
-	}
-};
-
 

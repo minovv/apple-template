@@ -1,1 +1,27 @@
-@use '../../lib/service.scss' as s; // s - means service //
+@use '../../lib/service.scss' as s; // s - means service
+
+.header__container {
+	display: flex;
+	padding: s.space(4) 0;
+	justify-content: space-between;
+	background-color: s.color('backgroundDark');
+}
+
+.header {
+	background-color: s.color('backgroundDark');	
+}
+
+.header__block	{
+	display: flex;
+	gap: s.space(8);
+}
+
+.header__icon {
+	@include s.click;
+}
+
+.header__link {
+	text-decoration: none;
+	color: s.color('whiteLight');
+	@include s.click;
+}

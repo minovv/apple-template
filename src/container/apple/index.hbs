@@ -4,8 +4,25 @@
  }}
 
 <div class="page">
-	<div class="section">
-		<div class="section__content">Hello worllllld!</div>
+	<div class="section header">
+		<div class="section__content">
+			{{#with header}}
+			<header class="header__container">
+				<div class="header__block">
+					<img src="/svg/apple.svg" alt="Apple" class="header__icon">
+					<nav class="header__block">
+						{{#each links}}
+						<a href="{{url}}" class="header__link">{{text}}</a>
+						{{/each}}
+					</nav>
+				</div>
+				<div class="header__block">
+					<img src="/svg/search.svg" alt="Search" class="header__icon">
+					<img src="/svg/profile.svg" alt="Profile" class="header__icon">
+				</div>
+			</header>
+			{{/with}}			
+		</div>
 	</div>
 </div>
 
