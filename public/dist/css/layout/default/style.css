@@ -44,6 +44,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 32px;
+  margin-top: 36px;
 }
 @media all and (width < 1000px) {
   .ftr__block {
