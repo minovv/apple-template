@@ -4,6 +4,7 @@
 .section {
 	display: flex;
 	justify-content: center;
+	padding-bottom: 0 s.space(4);
 }
 //This helps to adjust the max content size if the screen size are smaller in $screenMap
 $contentSizeMap: (
@@ -24,4 +25,29 @@ $contentSizeMap: (
 			max-width: map-get($contentSizeMap, $key);
 		}
 	}
-};
+}
+
+.section__double {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	@media all and (width < var.screen('laptop') ) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.ftr__block	{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: s.space(8);
+
+	@media all and (width < var.screen('tablet') ) {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 1fr 1fr;
+	}
+	
+	@media all and (width < var.screen('mobile') ) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr 1fr;
+	}
+}
